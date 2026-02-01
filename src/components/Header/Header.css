@@ -6,6 +6,11 @@ header {
 	padding: 0;
 }
 
+#actions-and-sandwich {
+	display: flex;
+	align-items: center;
+}
+
 @media (max-width: 768px) {
 	header {
 		justify-content: space-between;

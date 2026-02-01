@@ -18,10 +18,10 @@ export default function Header({ theme, toggleTheme }: HeaderProps) {
     <header>
       <Brand />
       <Navbar />
-      <Actions theme={theme} toggleTheme={toggleTheme} />
-      <Sandwich
-        onClick={() => setIsMenuOpen((prev) => !prev)}
-      />
+      <div id="actions-and-sandwich">
+        <Actions theme={theme} toggleTheme={toggleTheme} />
+        <Sandwich onClick={() => setIsMenuOpen((prev) => !prev)} />
+      </div>
       {isMenuOpen && <Modal />}
     </header>
   );
