@@ -1,0 +1,27 @@
+#info h1,
+#info h2,
+#info p {
+	margin: 0;
+	font-family: 'Outfit', sans-serif;
+	color: rgb(166, 121, 206);
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+#info h1 {
+	background: linear-gradient(to right, #ff3300, #ffff00, #ff3300);
+	background-size: 200% auto;
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	animation: wave 4s ease infinite;
+	font-size: 5rem;
+	font-weight: 700;
+	letter-spacing: 3px;
+}
+
+@keyframes wave {
+	to {
+		background-position: -200% center;
+	}
+}
