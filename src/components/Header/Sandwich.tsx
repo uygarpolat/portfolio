@@ -1,18 +1,11 @@
+import './Sandwich.css';
+
 interface SandwichProps {
-  isMenuOpen: boolean;
-  setIsMenuOpen: (isMenuOpen: boolean) => void;
+  onClick: () => void;
 }
-export default function Sandwich({ isMenuOpen, setIsMenuOpen }: SandwichProps) {
+export default function Sandwich({ onClick }: SandwichProps) {
   return (
-    <button
-      id="navbar-small-screen"
-      className="menu-toggle"
-      type="button"
-      aria-controls="mobile-menu"
-      aria-expanded={isMenuOpen}
-      aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-      onClick={() => setIsMenuOpen(!isMenuOpen)}
-    >
+    <button id="sandwich" type="button" onClick={onClick}>
       ☰
     </button>
   );

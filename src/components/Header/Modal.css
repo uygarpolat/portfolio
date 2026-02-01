@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+  #modal {
+    display: none;
+  }
+}
+
+#modal .nav-items {
+  display: block;
+}
+
+#modal .nav-items-list {
+  flex-direction: column;
+}

@@ -2,7 +2,8 @@ import { useState } from "react";
 import Brand from "./Brand";
 import Navbar from "./Navbar";
 import Actions from "./Actions";
-import Sandwich from "./Sandwich";
+import Sandwich from "./Sandwich.tsx";
+import Modal from "./Modal.tsx";
 import "./Header.css";
 
 interface HeaderProps {
@@ -11,15 +12,17 @@ interface HeaderProps {
 }
 
 export default function Header({ theme, toggleTheme }: HeaderProps) {
-
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
     <header>
       <Brand />
-      <Navbar id="navbar-big-screen"/>
+      <Navbar />
       <Actions theme={theme} toggleTheme={toggleTheme} />
-      <Sandwich isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <Sandwich
+        onClick={() => setIsMenuOpen((prev) => !prev)}
+      />
+      {isMenuOpen && <Modal />}
     </header>
   );
 }

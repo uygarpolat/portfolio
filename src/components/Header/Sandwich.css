@@ -1,0 +1,9 @@
+#sandwich {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  #sandwich {
+    display: none;
+  }
+}

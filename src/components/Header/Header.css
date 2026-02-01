@@ -6,20 +6,8 @@ header {
 	padding: 0;
 }
 
-#navbar-big-screen {
-	display: block;
-}
-
-#navbar-small-screen {
-	display: none;
-}
-
 @media (max-width: 768px) {
-	#navbar-big-screen {
-		display: none;
+	header {
+		justify-content: space-between;
 	}
-
-	#navbar-small-screen {
-		display: block;
-	}
-}
+  }
