@@ -1,0 +1,12 @@
+:root {
+	--bg-color: #1e293b;
+}
+
+[data-theme="light"] {
+	--bg-color: rgb(71, 173, 221);
+}
+
+body {
+	background-color: var(--bg-color);
+	margin: 0;
+}

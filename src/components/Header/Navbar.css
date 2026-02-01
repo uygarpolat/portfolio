@@ -1,0 +1,10 @@
+.navbar-list {
+	display: flex;
+	list-style: none;	
+}
+
+@media (max-width: 768px) {
+	.navbar-list {
+		flex-direction: column;
+	}
+}

@@ -1,0 +1,25 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+#navbar-big-screen {
+	display: block;
+}
+
+#navbar-small-screen {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	#navbar-big-screen {
+		display: none;
+	}
+
+	#navbar-small-screen {
+		display: block;
+	}
+}
