@@ -1,10 +1,62 @@
 .nav-items-list {
 	display: flex;
+	gap: 0.5rem;
 	list-style: none;
+	padding: 0;
+	margin: 0;
+	background: rgba(255, 255, 255, 0.05);
+	/* Subtle background for the pill container */
+	padding: 0.25rem;
+	border-radius: 9999px;
+	/* Pill shape */
+}
+
+.nav-link {
+	text-decoration: none;
+	color: inherit;
+	font-size: 1rem;
+	font-weight: 500;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem 1.25rem;
+	border-radius: 9999px;
+	transition: color 0.3s;
+	text-transform: capitalize;
+}
+
+/* Makeing sure that text is readable on top of pill */
+.nav-link span {
+	mix-blend-mode: normal;
+}
+
+/* Light mode specific pill color */
+.active-pill {
+	position: absolute;
+	inset: 0;
+	background-color: white;
+	border-radius: 9999px;
+	z-index: 0;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .active-pill {
+	background-color: #334155;
+	/* Slate-700 equivalent */
+}
+
+/* Improve contrast for active item text */
+.nav-link.active {
+	color: black;
+}
+
+[data-theme="dark"] .nav-link.active {
+	color: white;
 }
 
 @media (max-width: 768px) {
-  .nav-items {
-    display: none;
-  }
+	.nav-items {
+		display: none;
+	}
 }

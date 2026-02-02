@@ -2,8 +2,25 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 0;
-	padding: 0;
+	padding: 0.5rem 2rem;
+	position: fixed;
+	top: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	max-width: 1200px;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border-radius: 2rem;
+	z-index: 1000;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] header {
+	background: rgba(30, 41, 59, 0.7);
+	border-color: rgba(255, 255, 255, 0.05);
 }
 
 #actions-and-sandwich {
@@ -15,4 +32,4 @@ header {
 	header {
 		justify-content: space-between;
 	}
-  }
+}

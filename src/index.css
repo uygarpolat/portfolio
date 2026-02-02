@@ -8,6 +8,10 @@
 	--bg-color: rgb(71, 173, 221);
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: var(--bg-color);
 	margin: 0;

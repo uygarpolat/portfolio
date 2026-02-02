@@ -1,9 +1,19 @@
 #sandwich {
-  display: block;
+	display: none;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: inherit;
+	padding: 0.5rem;
+	transition: color 0.3s;
 }
 
-@media (min-width: 768px) {
-  #sandwich {
-    display: none;
-  }
+#sandwich:hover {
+	color: #a679ce;
+}
+
+@media (max-width: 768px) {
+	#sandwich {
+		display: block;
+	}
 }

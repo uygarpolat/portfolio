@@ -23,7 +23,7 @@ export default function Header({ theme, toggleTheme }: HeaderProps) {
         <Actions theme={theme} toggleTheme={toggleTheme} />
         <Sandwich onClick={() => setIsMenuOpen((prev) => !prev)} />
       </div>
-      {isMenuOpen && <Modal />}
+      {isMenuOpen && <Modal onClose={() => setIsMenuOpen(false)} />}
     </header>
   );
 }
