@@ -1,3 +1,7 @@
+#info {
+	width: 40%;
+}
+
 #info h1,
 #info h2,
 #info p {
@@ -5,7 +9,7 @@
 	font-family: 'Outfit', sans-serif;
 	color: rgb(166, 121, 206);
 	font-weight: 700;
-	font-size: 1.5rem;
+	font-size: 5.5rem;
 }
 
 #info h1 {
@@ -15,9 +19,7 @@
 	-webkit-background-clip: text;
 	background-clip: text;
 	animation: wave 4s ease infinite;
-	font-size: 5rem;
-	font-weight: 700;
-	letter-spacing: 3px;
+	font-size: 7rem;
 }
 
 @keyframes wave {
