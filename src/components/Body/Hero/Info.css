@@ -1,5 +1,5 @@
 #info {
-	width: 40%;
+	width: 384px;
 }
 
 #info h1,
@@ -9,7 +9,7 @@
 	font-family: 'Outfit', sans-serif;
 	color: rgb(166, 121, 206);
 	font-weight: 700;
-	font-size: 5.5rem;
+	font-size: 2rem;
 }
 
 #info h1 {

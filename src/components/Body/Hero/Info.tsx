@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 
+import Socials from "./Socials";
+
 import "./Info.css";
 
 export default function Info() {
@@ -26,8 +28,11 @@ export default function Info() {
         {...animationSettings}
         transition={{ type: "spring", duration: 2, delay: 0.3 }}
       >
-        I'm a software engineer based in Helsinki!
+        I'm a software engineer
+        <br />
+        based in Helsinki!
       </motion.p>
+      <Socials />
     </div>
   );
 }
