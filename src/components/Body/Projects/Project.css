@@ -1,0 +1,94 @@
+.project-card {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 3rem;
+	background: rgba(0, 0, 0, 0.4);
+	border: 1px solid #00ffff;
+	box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+	border-radius: 16px;
+	padding: 2rem;
+	overflow: hidden;
+}
+
+.project-card.reverse {
+	flex-direction: row-reverse;
+}
+
+.video-wrapper {
+	flex: 1;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.video-wrapper video {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.video-wrapper.vertical video {
+	max-height: 500px;
+	width: auto;
+	margin: 0 auto;
+}
+
+.project-content {
+	flex: 1;
+	text-align: left;
+}
+
+.project-title {
+	font-size: 2rem;
+	color: #00ffff;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+	text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+.project-description {
+	font-size: 1.1rem;
+	line-height: 1.6;
+	color: #e0e0e0;
+	margin-bottom: 2rem;
+}
+
+.project-stack h4 {
+	margin-bottom: 1rem;
+	color: #aaa;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 0.9rem;
+}
+
+.project-stack .dev-icons-container {
+	justify-content: flex-start;
+	padding: 0;
+	gap: 1.5rem;
+}
+
+.project-stack .icon-container i {
+	font-size: 3rem;
+}
+
+@media (max-width: 900px) {
+
+	.project-card,
+	.project-card.reverse {
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.project-content {
+		text-align: center;
+	}
+
+	.project-stack .dev-icons-container {
+		justify-content: center;
+	}
+}

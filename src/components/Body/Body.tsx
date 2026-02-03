@@ -1,6 +1,7 @@
 import Hero from "./Hero/Hero";
 import About from "./About/About";
 import Skills from "./Skills/Skills";
+import Projects from "./Projects/Projects";
 import SectionSeparator from "./SectionSeparator/SectionSeparator";
 
 export default function Body() {
@@ -12,6 +13,7 @@ export default function Body() {
       <SectionSeparator label="Skills" />
       <Skills />
       <SectionSeparator label="Projects" />
+      <Projects />
       <SectionSeparator label="Contact" />
     </>
   );

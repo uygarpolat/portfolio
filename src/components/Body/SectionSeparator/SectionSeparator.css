@@ -1,12 +1,11 @@
 .section-separator {
 	width: 80%;
 	max-width: 600px;
-	margin: 6rem auto;
+	margin: 4rem auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	/* For absolute children */
 }
 
 .separator-line {
@@ -29,11 +28,9 @@
 	border-radius: 2rem;
 	padding: 0.5rem 1.5rem;
 	white-space: nowrap;
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 	z-index: 2;
 }

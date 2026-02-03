@@ -1,0 +1,11 @@
+#projects {
+	width: 80%;
+	margin: 4rem auto;
+	color: #fff;
+}
+
+.projects-list {
+	display: flex;
+	flex-direction: column;
+	gap: 5rem;
+}

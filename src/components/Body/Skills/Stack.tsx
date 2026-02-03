@@ -58,13 +58,14 @@ export default function Stack() {
 
   const renderCategory = (category: string, icons: typeof languages) => (
     <div key={category} className="stack-category">
-      <h3>{category}</h3>
+      <h3 className="stack-category-title">{category}</h3>
       <DevIcons icons={icons} />
     </div>
   );
 
   return (
     <div id="stack">
+      <h3 id="section-title-stack">Tech Stack</h3>
       {renderCategory("languages", languages)}
       <div className="stack-row">
         {renderCategory("frontend", frontend)}
