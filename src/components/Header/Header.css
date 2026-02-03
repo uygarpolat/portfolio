@@ -3,10 +3,9 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 0.5rem 2rem;
-	position: fixed;
+	position: sticky;
 	top: 1rem;
-	left: 50%;
-	transform: translateX(-50%);
+	margin: 1rem auto;
 	width: 90%;
 	max-width: 1200px;
 	background: rgba(255, 255, 255, 0.1);
@@ -30,6 +29,7 @@ header {
 
 @media (max-width: 768px) {
 	header {
+		width: 80vw;
 		justify-content: space-between;
 	}
 }

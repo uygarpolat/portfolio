@@ -1,12 +1,19 @@
 #hero {
-	margin: auto;
+	margin: 5rem auto 0 auto;
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
+	gap: max(0px, calc((100vw - 768px) * 0.2));
 }
 
 @media (max-width: 768px) {
 	#hero {
 		flex-direction: column;
+		gap: 2rem;
+	}
+
+	#hero #info,
+	#hero #avatar {
+		width: 80vw;
 	}
 }

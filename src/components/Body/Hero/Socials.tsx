@@ -1,4 +1,9 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaGithub as GithubIcon,
+  FaLinkedin as LinkedinIcon,
+  FaDiscord as DiscordIcon,
+} from "react-icons/fa";
+import { SiGmail as EmailIcon } from "react-icons/si";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -6,16 +11,28 @@ import "./Socials.css";
 
 const socialsData = [
   {
-    icon: FaGithub,
+    icon: GithubIcon,
     href: "https://github.com/uygarpolat",
     color: "#6e57ff",
     delay: 0.4,
   },
   {
-    icon: FaLinkedin,
+    icon: LinkedinIcon,
     href: "https://linkedin.com/in/uygarpolat",
     color: "#0077b5",
     delay: 0.5,
+  },
+  {
+    icon: DiscordIcon,
+    href: "https://discord.com/users/951276506431225946",
+    color: "#000000",
+    delay: 0.6,
+  },
+  {
+    icon: EmailIcon,
+    href: "mailto:uygarpolat@gmail.com",
+    color: "#000000",
+    delay: 0.7,
   },
 ];
 

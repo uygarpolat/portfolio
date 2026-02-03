@@ -26,7 +26,7 @@
 	text-transform: capitalize;
 }
 
-/* Makeing sure that text is readable on top of pill */
+/* Making sure that text is readsble on top of pill */
 .nav-link span {
 	mix-blend-mode: normal;
 }
@@ -46,7 +46,6 @@
 	/* Slate-700 equivalent */
 }
 
-/* Improve contrast for active item text */
 .nav-link.active {
 	color: black;
 }
