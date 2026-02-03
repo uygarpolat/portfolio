@@ -1,94 +1,115 @@
 .project-card {
 	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 3rem;
-	background: rgba(0, 0, 0, 0.4);
+	flex-direction: column;
+	background: rgba(0, 0, 0, 0.6);
 	border: 1px solid #00ffff;
-	box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
-	border-radius: 16px;
-	padding: 2rem;
-	overflow: hidden;
-}
-
-.project-card.reverse {
-	flex-direction: row-reverse;
-}
-
-.video-wrapper {
-	flex: 1;
+	box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
 	border-radius: 12px;
 	overflow: hidden;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+}
+
+.media-container {
+	width: 100%;
+	aspect-ratio: 16/9;
 	background: #000;
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(0, 255, 255, 0.3);
 }
 
-.video-wrapper video {
+.media-container video,
+.media-container img {
 	width: 100%;
-	height: auto;
-	display: block;
-}
-
-.video-wrapper.vertical video {
-	max-height: 500px;
-	width: auto;
-	margin: 0 auto;
+	height: 100%;
+	object-fit: contain;
 }
 
 .project-content {
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
 	flex: 1;
-	text-align: left;
 }
 
 .project-title {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	color: #00ffff;
-	margin-bottom: 1rem;
+	margin: 0 0 0.5rem 0;
 	text-transform: uppercase;
-	text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
 }
 
 .project-description {
-	font-size: 1.1rem;
-	line-height: 1.6;
-	color: #e0e0e0;
-	margin-bottom: 2rem;
+	font-size: 1rem;
+	color: #ccc;
+	line-height: 1.5;
+	margin-bottom: 1.5rem;
+	flex-grow: 1;
 }
 
-.project-stack h4 {
-	margin-bottom: 1rem;
-	color: #aaa;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-size: 0.9rem;
+.project-stack {
+	margin-bottom: 1.5rem;
 }
 
 .project-stack .dev-icons-container {
-	justify-content: flex-start;
 	padding: 0;
-	gap: 1.5rem;
+	justify-content: flex-start;
+	gap: 1rem;
 }
 
 .project-stack .icon-container i {
-	font-size: 3rem;
+	font-size: 2rem;
 }
 
-@media (max-width: 900px) {
+.project-links {
+	display: flex;
+	gap: 1rem;
+}
 
-	.project-card,
-	.project-card.reverse {
-		flex-direction: column;
-		gap: 2rem;
-	}
+.link-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.5rem 1rem;
+	border-radius: 6px;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 0.9rem;
+	transition: all 0.2s ease;
+	border: 1px solid transparent;
+}
 
-	.project-content {
-		text-align: center;
-	}
+.link-btn i {
+	font-size: 1.1rem;
+}
 
-	.project-stack .dev-icons-container {
-		justify-content: center;
-	}
+/* GitHub Button Style */
+.link-btn.github {
+	background: rgba(255, 255, 255, 0.1);
+	color: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.link-btn.github:hover {
+	background: rgba(255, 255, 255, 0.2);
+	border-color: #fff;
+}
+
+/* Deploy Button Style */
+.link-btn.deploy {
+	background: rgba(0, 255, 255, 0.1);
+	color: #00ffff;
+	border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+.link-btn.deploy:hover {
+	background: rgba(0, 255, 255, 0.2);
+	box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
 }

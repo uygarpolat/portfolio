@@ -1,14 +1,17 @@
 import { motion } from "motion/react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
 
-const navItems = ["Home", "About", "Skills", "Projects", "contact"];
+const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
 
 export default function Navbar() {
   const [activeTab, setActiveTab] = useState("Home");
+  const isNavigating = useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      if (isNavigating.current) return;
+
       const sections = navItems.map((item) => document.getElementById(item));
       const scrollPosition = window.scrollY + 100; // Offset
 
@@ -27,6 +30,15 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = (item: string) => {
+    setActiveTab(item);
+    isNavigating.current = true;
+
+    setTimeout(() => {
+      isNavigating.current = false;
+    }, 1000);
+  };
+
   return (
     <nav className="nav-items">
       <ul className="nav-items-list">
@@ -35,7 +47,7 @@ export default function Navbar() {
             <a
               href={`#${item}`}
               className={`nav-link ${activeTab === item ? "active" : ""}`}
-              onClick={() => setActiveTab(item)}
+              onClick={() => handleNavClick(item)}
             >
               {activeTab === item && (
                 <motion.div

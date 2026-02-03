@@ -3,7 +3,7 @@ import "./About.css";
 
 export default function About() {
   return (
-    <div id="about">
+    <div id="About">
       {/* <h2 className="section-title">About Me</h2> */}
       <motion.div
         className="about-content"

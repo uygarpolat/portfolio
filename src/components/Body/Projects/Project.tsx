@@ -6,26 +6,28 @@ import "./Project.css";
 interface ProjectProps {
   title: string;
   description: string;
-  videoSrc: string;
+  mediaSrc: string;
+  mediaType: "video" | "image";
   stack: { name: string; logoStyle: string }[];
-  orientation?: "horizontal" | "vertical";
-  reverseLayout?: boolean;
+  github?: string;
+  deploy?: string;
 }
 
 export default function Project({
   title,
   description,
-  videoSrc,
+  mediaSrc,
+  mediaType,
   stack,
-  orientation = "horizontal",
-  reverseLayout = false,
+  github,
+  deploy,
 }: ProjectProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { amount: 0.6 });
 
   useEffect(() => {
-    if (videoRef.current) {
+    if (mediaType === "video" && videoRef.current) {
       if (isInView) {
         videoRef.current
           .play()
@@ -34,26 +36,30 @@ export default function Project({
         videoRef.current.pause();
       }
     }
-  }, [isInView]);
+  }, [isInView, mediaType]);
 
   return (
     <motion.div
       ref={containerRef}
-      className={`project-card ${reverseLayout ? "reverse" : ""}`}
-      initial={{ opacity: 0, y: 50 }}
+      className="project-card"
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.5 }}
     >
-      <div className={`video-wrapper ${orientation}`}>
-        <video
-          ref={videoRef}
-          src={videoSrc}
-          muted
-          loop
-          playsInline
-          controls={false}
-        />
+      <div className="media-container">
+        {mediaType === "video" ? (
+          <video
+            ref={videoRef}
+            src={mediaSrc}
+            muted
+            loop
+            playsInline
+            controls={false}
+          />
+        ) : (
+          <img src={mediaSrc} alt={title} loading="lazy" />
+        )}
       </div>
 
       <div className="project-content">
@@ -61,9 +67,33 @@ export default function Project({
         <p className="project-description">{description}</p>
 
         <div className="project-stack">
-          <h4>Technologies</h4>
           <DevIcons icons={stack} />
         </div>
+
+        {(github || deploy) && (
+          <div className="project-links">
+            {github && (
+              <a
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-btn github"
+              >
+                <i className="devicon-github-original"></i> GitHub
+              </a>
+            )}
+            {deploy && (
+              <a
+                href={deploy}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-btn deploy"
+              >
+                <i className="devicon-chrome-plain"></i> Live Demo
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </motion.div>
   );

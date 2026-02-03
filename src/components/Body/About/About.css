@@ -1,11 +1,11 @@
-#about {
+#About {
 	width: 80%;
 	margin: 4rem auto;
 	text-align: center;
 	color: #e0e0e0;
 }
 
-#about .section-title {
+#About .section-title {
 	display: inline-block;
 	font-size: 2rem;
 	margin-bottom: 2rem;
@@ -54,7 +54,7 @@
 }
 
 @media (max-width: 768px) {
-	#about {
+	#About {
 		width: 90%;
 	}
 
