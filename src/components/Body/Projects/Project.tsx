@@ -1,13 +1,15 @@
 import { useRef, useEffect } from "react";
 import { motion, useInView } from "motion/react";
 import DevIcons from "../Skills/DevIcons";
+import ImageSlider from "./ImageSlider";
 import "./Project.css";
 
 interface ProjectProps {
   title: string;
   description: string;
   mediaSrc: string;
-  mediaType: "video" | "image";
+  mediaSrc2?: string; // Optional second image for slider
+  mediaType: "video" | "image" | "slider";
   stack: { name: string; logoStyle: string }[];
   github?: string;
   deploy?: string;
@@ -17,6 +19,7 @@ export default function Project({
   title,
   description,
   mediaSrc,
+  mediaSrc2,
   mediaType,
   stack,
   github,
@@ -57,6 +60,12 @@ export default function Project({
             playsInline
             controls={false}
           />
+        ) : mediaType === "slider" && mediaSrc2 ? (
+          <ImageSlider
+            beforeImage={mediaSrc}
+            afterImage={mediaSrc2}
+            alt={title}
+          />
         ) : (
           <img src={mediaSrc} alt={title} loading="lazy" />
         )}
@@ -89,7 +98,7 @@ export default function Project({
                 rel="noopener noreferrer"
                 className="link-btn deploy"
               >
-                <i className="devicon-chrome-plain"></i> Live Demo
+                <i className="devicon-chrome-plain"></i> Website
               </a>
             )}
           </div>
