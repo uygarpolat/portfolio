@@ -49,8 +49,8 @@ export default function Contact() {
         transition={{ duration: 0.6 }}
       >
         <p className="contact-intro">
-          Got a project in mind or just want to say hi? <br />
-          I'm currently open to new opportunities!
+          Please feel free to reach out about anything, I'm sure we could be
+          friends. Thanks for stopping by! 👋
         </p>
 
         {status === "success" ? (
@@ -118,8 +118,15 @@ export default function Contact() {
 
             {status === "error" && (
               <p className="error-message">
-                Oops! Something went wrong. Please try again or email me
-                directly.
+                Oops! Something went wrong. Please try again or{" "}
+                <a
+                  href="mailto:uygarpolat@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  email me directly
+                </a>
+                .
               </p>
             )}
           </form>
