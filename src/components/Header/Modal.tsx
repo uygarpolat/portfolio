@@ -5,7 +5,7 @@ interface ModalProps {
   onClose: () => void;
 }
 
-const navItems = ["home", "projects", "about", "contact"];
+const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
 
 export default function Modal({ onClose }: ModalProps) {
   return (
