@@ -8,6 +8,7 @@ export const AnimatedThemeToggle = ({ className }: { className?: string }) => {
 
   // Avoid hydration mismatch
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 
