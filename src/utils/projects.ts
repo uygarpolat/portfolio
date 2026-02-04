@@ -43,7 +43,7 @@ export const projects = [
   {
     title: "Moustracker animation",
     description:
-      "Inspired by a component in Framer Motion, this practice animation tracks the moust position and makes each line point to it while highlighting nearby lines.",
+      "Inspired by a component in Framer Motion, this practice animation tracks the mouse position and makes each line point to it while highlighting nearby lines.",
     mediaSrc: mouseTracker,
     mediaType: "video" as const,
     stack: [
