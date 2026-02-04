@@ -1,5 +1,5 @@
-import wordle from "../assets/videos/video1.mp4";
-import mouseTracker from "../assets/videos/video2.mp4";
+import wordle from "../assets/videos/wordle.mp4";
+import mouseTracker from "../assets/videos/mousetracker.mp4";
 import todo from "../assets/videos/todo.mp4";
 import minishellImg from "../assets/images/minishell-minishell.JPG";
 import bashImg from "../assets/images/minishell-bash.JPG";
@@ -8,7 +8,7 @@ export const projects = [
   {
     title: "Wordle Clone",
     description:
-      "A fully functional clone of the popular game Wordle, built with React and TypeScript. Features include local storage for stats, light/dark mode, and a polished UI.",
+      "A fully functional clone of the popular game Wordle, built with React and TypeScript. Features include different language support, time mode, light/dark themes, stats and sharing game results.",
     mediaSrc: wordle,
     mediaType: "video" as const,
     github: "https://github.com/uygarpolat/wordle",
@@ -57,7 +57,7 @@ export const projects = [
   {
     title: "Minishell",
     description:
-      "As a part of the 42 curriculum, we built a shell that mimics bash behavior. It handles pipes, redirections, signals and so much more... Slide to compare to Bash!",
+      "As a part of the 42 curriculum, we built a shell that mimics bash behavior. It handles pipes, redirections, signals and so much more... Slide the slider on the image to compare with Bash!",
     mediaSrc: bashImg,
     mediaSrc2: minishellImg,
     mediaType: "slider" as const,
