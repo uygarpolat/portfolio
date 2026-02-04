@@ -16,3 +16,9 @@ body {
 	background-color: var(--bg-color);
 	margin: 0;
 }
+
+#root {
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+}
