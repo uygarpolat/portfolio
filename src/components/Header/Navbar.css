@@ -52,7 +52,7 @@
 }
 
 [data-theme="dark"] .nav-link.active {
-	color: white;
+	color: #00ffff;
 }
 
 @media (max-width: 768px) {
