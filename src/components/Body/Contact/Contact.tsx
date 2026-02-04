@@ -40,7 +40,7 @@ export default function Contact() {
   };
 
   return (
-    <div id="contact">
+    <div id="Contact">
       <motion.div
         className="contact-container"
         initial={{ opacity: 0, y: 30 }}

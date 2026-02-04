@@ -1,6 +1,6 @@
 #socials {
 	display: flex;
-	gap: 1.5rem;
+	justify-content: space-between;
 	margin-top: 1.5rem;
 }
 

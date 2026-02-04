@@ -27,3 +27,9 @@
 		background-position: -200% center;
 	}
 }
+
+@media (max-width: 768px) {
+	#info h1 {
+		font-size: 6rem;
+	}
+}
