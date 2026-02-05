@@ -7,18 +7,18 @@
 #info p {
 	margin: 0;
 	font-family: 'Outfit', sans-serif;
-	color: rgb(166, 121, 206);
+	color: #a679ce;
 	font-weight: 700;
 	font-size: 2rem;
 }
 
 #info h1 {
-	background: linear-gradient(to right, #ff3300, #ffff00, #ff3300);
+	background: var(--bg-gradient-color-scheme);
 	background-size: 200% auto;
 	color: transparent;
 	-webkit-background-clip: text;
 	background-clip: text;
-	animation: wave 4s ease infinite;
+	animation: wave 4s linear infinite;
 	font-size: 7rem;
 }
 

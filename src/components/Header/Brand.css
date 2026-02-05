@@ -3,7 +3,7 @@
 	font-family: 'Kaushan Script', cursive;
 	font-weight: 700;
 	font-size: 2rem;
-	background: linear-gradient(to right, #ff3300, #ffff00, #ff3300);
+	background: var(--bg-gradient-color-scheme);
 	background-size: 200% auto;
 	color: transparent;
 	-webkit-background-clip: text;

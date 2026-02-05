@@ -2,10 +2,12 @@
 
 :root {
 	--bg-color: #1e293b;
+	--bg-gradient-color-scheme: linear-gradient(to right, #00ffff, #098383, #00ffff);
 }
 
 [data-theme="light"] {
 	--bg-color: rgb(71, 173, 221);
+	--bg-gradient-color-scheme: linear-gradient(to right, #6fbbe5, #cfe9f7, #6fbbe5);
 }
 
 html {
