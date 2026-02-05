@@ -3,6 +3,7 @@ import mouseTracker from "../assets/videos/mousetracker.mp4";
 import todo from "../assets/videos/todo.mp4";
 import minishellImg from "../assets/images/minishell-minishell.JPG";
 import bashImg from "../assets/images/minishell-bash.JPG";
+import pong from "../assets/videos/pong.mp4";
 
 export const projects = [
   {
@@ -20,6 +21,21 @@ export const projects = [
       { name: "css3", logoStyle: "plain-wordmark" },
       { name: "vitejs", logoStyle: "plain" },
       { name: "vercel", logoStyle: "original-wordmark" },
+    ],
+  },
+  {
+    title: "Full Stack Pong",
+    description:
+      "A real-time multiplayer Pong game built with NestJS, React, and WebSockets. Features include user authentication (OAuth), friend system, match history, live chat and tournaments. A robust full-stack application developed as a group final project at Hive Helsinki.",
+    mediaSrc: pong,
+    mediaType: "video" as const,
+    github: "https://github.com/uygarpolat/full-stack-pong",
+    stack: [
+      { name: "nestjs", logoStyle: "plain" },
+      { name: "react", logoStyle: "original-wordmark" },
+      { name: "typescript", logoStyle: "plain" },
+      { name: "postgresql", logoStyle: "plain-wordmark" },
+      { name: "docker", logoStyle: "plain-wordmark" },
     ],
   },
   {
