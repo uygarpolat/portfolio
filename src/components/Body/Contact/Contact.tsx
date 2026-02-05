@@ -120,7 +120,7 @@ export default function Contact() {
               <p className="error-message">
                 Oops! Something went wrong. Please try again or{" "}
                 <a
-                  href="mailto:uygarpolat@gmail.com"
+                  href="mailto:info@uygarpolat.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
