@@ -30,7 +30,7 @@ const socialsData = [
   },
   {
     icon: EmailIcon,
-    href: "mailto:uygarpolat@gmail.com",
+    href: "mailto:info@uygarpolat.com",
     color: "#000000",
     delay: 0.7,
   },

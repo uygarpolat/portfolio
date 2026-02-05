@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const API_KEY = process.env.RESEND_API_KEY as string;
-const RECEPIENT_EMAIL = process.env.RECEPIENT_EMAIL as string;
+const RECEPIENT_EMAIL = "info@uygarpolat.com";
 
 if (!API_KEY) {
   console.error("No RESEND_API_KEY found in .env file.");
