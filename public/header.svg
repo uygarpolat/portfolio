@@ -1,0 +1,24 @@
+<svg width="500" height="100" viewBox="0 0 500 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect x="5" y="5" width="490" height="90" rx="20" fill="url(#bg-gradient)" stroke="#38bdf8" stroke-width="2" />
+  
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" 
+        font-family="'Segoe UI', Helvetica, Arial, sans-serif" 
+        font-size="40" font-weight="bold" fill="#f8fafc" letter-spacing="3"
+        filter="url(#glow)">
+    uygarpolat.com
+  </text>
+</svg>
