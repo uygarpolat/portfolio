@@ -1,7 +1,10 @@
 import { Resend } from "resend";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const RECEPIENT_EMAIL = "info@uygarpolat.com";
+const RECEPIENT_EMAIL = process.env.RECEPIENT_EMAIL as string;
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
