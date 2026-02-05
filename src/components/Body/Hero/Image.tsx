@@ -17,12 +17,27 @@ export default function Image() {
         />
       </div>
       <svg className="avatar-ring" viewBox="0 0 100 100">
+        <defs>
+          <linearGradient id="ringGradient" gradientTransform="rotate(0)">
+            <stop offset="0%" stopColor="var(--gradient-col-1)" />
+            <stop offset="50%" stopColor="var(--gradient-col-2)" />
+            <stop offset="100%" stopColor="var(--gradient-col-1)" />
+            <animateTransform
+              attributeName="gradientTransform"
+              type="rotate"
+              from="0 0.5 0.5"
+              to="360 0.5 0.5"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </linearGradient>
+        </defs>
         <motion.circle
           cx="50"
           cy="50"
           r="49"
           fill="transparent"
-          stroke="#00ffff"
+          stroke="url(#ringGradient)"
           strokeWidth="2"
           initial={{ pathLength: 0, opacity: 1 }}
           animate={{ pathLength: 1.01, opacity: 1 }}

@@ -1,8 +1,8 @@
-#brand {
+.brand-text {
 	margin: 0;
-	font-family: 'Kaushan Script', cursive;
+	font-family: 'Outfit', cursive;
 	font-weight: 700;
-	font-size: 2rem;
+	font-size: 1.2rem;
 	background: var(--bg-gradient-color-scheme);
 	background-size: 200% auto;
 	color: transparent;
@@ -10,7 +10,40 @@
 	background-clip: text;
 	animation: wave 4s ease infinite;
 	cursor: pointer;
+	display: inline-block;
 }
+
+.brand-text .Typewriter__cursor {
+	color: var(--cursor-color);
+}
+
+#text-and-button {
+	display: flex;
+	align-items: center;
+}
+
+#refresh-button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 0;
+	color: var(--cursor-color);
+	transition: all 0.3s ease;
+}
+
+#refresh-button:hover {
+	color: var(--cursor-color);
+	transform: rotate(180deg);
+}
+
+#random-project-text {
+	font-family: 'Outfit', sans-serif;
+}
+
+
 
 @keyframes wave {
 	to {
