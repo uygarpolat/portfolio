@@ -15,24 +15,28 @@ const socialsData = [
     href: "https://github.com/uygarpolat",
     color: "#6e57ff",
     delay: 0.4,
+    label: "GitHub Profile",
   },
   {
     icon: LinkedinIcon,
     href: "https://linkedin.com/in/uygarpolat",
     color: "#0077b5",
     delay: 0.5,
+    label: "LinkedIn Profile",
   },
   {
     icon: DiscordIcon,
     href: "https://discord.com/users/951276506431225946",
     color: "#000000",
     delay: 0.6,
+    label: "Discord Profile",
   },
   {
     icon: EmailIcon,
     href: "mailto:info@uygarpolat.com",
     color: "#000000",
     delay: 0.7,
+    label: "Send Email",
   },
 ];
 
@@ -52,6 +56,7 @@ export default function Socials() {
           href={social.href}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label={social.label}
           {...animationSettings}
           transition={
             isLoaded

@@ -25,3 +25,4 @@ dist-ssr
 
 .env
 optimize-videos.sh
+accessibility_standards.md

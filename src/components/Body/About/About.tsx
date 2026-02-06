@@ -3,8 +3,7 @@ import "./About.css";
 
 export default function About() {
   return (
-    <div id="About">
-      {/* <h2 className="section-title">About Me</h2> */}
+    <section id="About" aria-label="About Me">
       <motion.div
         className="about-content"
         initial={{ opacity: 0, y: 20 }}
@@ -30,6 +29,7 @@ export default function About() {
             href="https://www.hive.fi"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Hive Helsinki (opens in a new tab)"
           >
             Hive Helsinki
           </a>
@@ -39,6 +39,7 @@ export default function About() {
             href="https://www.42network.org/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="42 School (opens in a new tab)"
           >
             42 School
           </a>
@@ -50,6 +51,6 @@ export default function About() {
           can find some of the stuff I've been cooking over the years.
         </p>
       </motion.div>
-    </div>
+    </section>
   );
 }
