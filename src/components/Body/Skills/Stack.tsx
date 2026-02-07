@@ -13,7 +13,6 @@ const stackItems = {
     { name: "javascript", logoStyle: "plain" },
     { name: "typescript", logoStyle: "plain" },
     { name: "python", logoStyle: "plain-wordmark" },
-    { name: "go", logoStyle: "original-wordmark" },
     { name: "c", logoStyle: "original" },
     { name: "cplusplus", logoStyle: "plain" },
   ],
