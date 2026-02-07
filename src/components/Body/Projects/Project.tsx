@@ -59,6 +59,7 @@ export default function Project({
             loop
             playsInline
             controls={false}
+            preload="none"
           />
         ) : mediaType === "slider" && mediaSrc2 ? (
           <ImageSlider

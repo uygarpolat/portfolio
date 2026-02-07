@@ -1,8 +1,8 @@
 import wordle from "../assets/videos/wordle.mp4";
 import mouseTracker from "../assets/videos/mousetracker.mp4";
 import todo from "../assets/videos/todo.mp4";
-import minishellImg from "../assets/images/minishell-minishell.JPG";
-import bashImg from "../assets/images/minishell-bash.JPG";
+import minishellImg from "../assets/images/minishell-minishell.webp";
+import bashImg from "../assets/images/minishell-bash.webp";
 import pong from "../assets/videos/pong.mp4";
 
 export const projects = [

@@ -6,17 +6,27 @@ export default function Contact() {
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
+  const [validationError, setValidationError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
 
     const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      message: formData.get("message"),
-    };
+    const email = formData.get("email") as string;
+    const name = formData.get("name") as string;
+    const message = formData.get("message") as string;
+
+    // Strict Email Validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setValidationError("Please enter a valid email address.");
+      setStatus("idle");
+      return;
+    }
+    setValidationError(null);
+
+    const data = { name, email, message };
 
     try {
       const response = await fetch("/api/send-email", {
@@ -27,10 +37,13 @@ export default function Contact() {
         body: JSON.stringify(data),
       });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (response.ok && result?.success !== false) {
         setStatus("success");
         (e.target as HTMLFormElement).reset();
       } else {
+        console.error("Server Error:", result);
         setStatus("error");
       }
     } catch (error) {
@@ -77,6 +90,7 @@ export default function Contact() {
                 type="text"
                 id="name"
                 name="name"
+                autoComplete="name"
                 placeholder="Your Name"
                 required
                 disabled={status === "loading"}
@@ -89,10 +103,23 @@ export default function Contact() {
                 type="email"
                 id="email"
                 name="email"
+                autoComplete="email"
                 placeholder="your.email@example.com"
                 required
                 disabled={status === "loading"}
               />
+              {validationError && (
+                <p
+                  className="validation-error"
+                  style={{
+                    color: "red",
+                    fontSize: "0.875rem",
+                    marginTop: "0.25rem",
+                  }}
+                >
+                  {validationError}
+                </p>
+              )}
             </div>
 
             <div className="form-group">
