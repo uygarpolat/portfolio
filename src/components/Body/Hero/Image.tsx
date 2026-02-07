@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import upolat2 from "../../../assets/images/upolat2.jpg";
+import upolat2 from "../../../assets/images/upolat2.webp";
 import "./Image.css";
 
 export default function Image() {

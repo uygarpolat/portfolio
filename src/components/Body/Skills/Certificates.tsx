@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import "./Certificates.css";
 
 const images = import.meta.glob<{ default: string }>(
-  "../../../assets/certificates/*.{png,jpg,jpeg,svg}",
+  "../../../assets/certificates/*.webp",
   {
     eager: true,
   }
