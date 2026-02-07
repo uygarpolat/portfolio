@@ -8,6 +8,20 @@ export default function Contact() {
   >("idle");
   const [validationError, setValidationError] = useState<string | null>(null);
 
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    const email = e.target.value;
+    if (email && !validateEmail(email)) {
+      setValidationError("Please enter a valid email address.");
+    } else {
+      setValidationError(null);
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
@@ -17,9 +31,7 @@ export default function Contact() {
     const name = formData.get("name") as string;
     const message = formData.get("message") as string;
 
-    // Strict Email Validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    if (!validateEmail(email)) {
       setValidationError("Please enter a valid email address.");
       setStatus("idle");
       return;
@@ -107,6 +119,8 @@ export default function Contact() {
                 placeholder="your.email@example.com"
                 required
                 disabled={status === "loading"}
+                onBlur={handleBlur}
+                onChange={() => setValidationError(null)}
               />
               {validationError && (
                 <p
