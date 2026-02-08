@@ -1,11 +1,14 @@
 import { motion } from "motion/react";
 import "./DevIcons.css";
 
+export interface DevIconItem {
+  name: string;
+  logoStyle: string;
+  colored: boolean;
+}
+
 interface DevIconsProps {
-  icons: {
-    name: string;
-    logoStyle: string;
-  }[];
+  icons: DevIconItem[];
 }
 
 export default function DevIcons({ icons }: DevIconsProps) {
@@ -31,7 +34,11 @@ export default function DevIcons({ icons }: DevIconsProps) {
           }}
           whileHover={{ scale: 1.2 }}
         >
-          <i className={`devicon-${icon.name}-${icon.logoStyle} colored`}></i>
+          <i
+            className={`devicon-${icon.name}-${icon.logoStyle} ${
+              icon.colored ? "colored" : ""
+            }`}
+          ></i>
         </motion.div>
       ))}
     </div>

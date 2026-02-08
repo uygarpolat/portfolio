@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import { motion, useInView } from "motion/react";
-import DevIcons from "../Skills/DevIcons";
+import DevIcons, { type DevIconItem } from "../Skills/DevIcons";
 import ImageSlider from "./ImageSlider";
 import "./Project.css";
 
@@ -10,7 +10,7 @@ interface ProjectProps {
   mediaSrc: string;
   mediaSrc2?: string; // Optional second image for slider
   mediaType: "video" | "image" | "slider";
-  stack: { name: string; logoStyle: string }[];
+  stack: DevIconItem[];
   github?: string;
   deploy?: string;
 }
