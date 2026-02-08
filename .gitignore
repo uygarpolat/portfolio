@@ -28,3 +28,7 @@ dist-ssr
 optimize-videos.sh
 accessibility_standards.md
 convert_to_webm.py
+
+# Playwright
+playwright-report/
+test-results/
