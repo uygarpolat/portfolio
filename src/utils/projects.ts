@@ -1,11 +1,30 @@
-import wordle from "../assets/videos/wordle.mp4";
+import wordle from "../assets/videos/wordle.webm";
 import mouseTracker from "../assets/videos/mousetracker.mp4";
-import todo from "../assets/videos/todo.mp4";
+import todo from "../assets/videos/todo.webm";
 import minishellImg from "../assets/images/minishell-minishell.webp";
 import bashImg from "../assets/images/minishell-bash.webp";
-import pong from "../assets/videos/pong.mp4";
+import pong from "../assets/videos/pong.webm";
+import portfolio from "../assets/videos/portfolio.webm";
 
 export const projects = [
+  {
+    title: "Portfolio",
+    description:
+      "My personal portfolio website, the one you are looking at right now! Built with React, TypeScript, Vite, and Vanilla CSS.",
+    mediaSrc: portfolio,
+    mediaType: "video" as const,
+    github: "https://github.com/uygarpolat/portfolio",
+    deploy: "https://uygarpolat.com/",
+    stack: [
+      { name: "typescript", logoStyle: "plain" },
+      { name: "react", logoStyle: "original-wordmark" },
+      { name: "html5", logoStyle: "plain-wordmark" },
+      { name: "css3", logoStyle: "plain-wordmark" },
+      { name: "vitejs", logoStyle: "plain" },
+      { name: "vercel", logoStyle: "original-wordmark" },
+      { name: "framermotion", logoStyle: "original-wordmark" },
+    ],
+  },
   {
     title: "Wordle Clone",
     description:
