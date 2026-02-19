@@ -3,7 +3,10 @@ import "./About.css";
 
 export default function About() {
   return (
-    <section id="About" aria-label="About Me">
+    <section id="About" aria-labelledby="about-heading">
+      <h2 id="about-heading" className="sr-only">
+        About
+      </h2>
       <motion.div
         className="about-content"
         initial={{ opacity: 0, y: 20 }}

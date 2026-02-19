@@ -1,16 +1,28 @@
+import type { RefObject } from "react";
 import "./Sandwich.css";
 
 interface SandwichProps {
   onClick: () => void;
+  expanded: boolean;
+  controls: string;
+  buttonRef: RefObject<HTMLButtonElement | null>;
 }
 
-export default function Sandwich({ onClick }: SandwichProps) {
+export default function Sandwich({
+  onClick,
+  expanded,
+  controls,
+  buttonRef,
+}: SandwichProps) {
   return (
     <button
       id="sandwich"
       type="button"
       onClick={onClick}
-      aria-label="Open menu"
+      ref={buttonRef}
+      aria-label={expanded ? "Close menu" : "Open menu"}
+      aria-expanded={expanded}
+      aria-controls={controls}
     >
       <svg
         width="24"

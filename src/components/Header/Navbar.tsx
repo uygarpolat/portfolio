@@ -40,7 +40,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="nav-items">
+    <nav className="nav-items" aria-label="Primary">
       <ul className="nav-items-list">
         {navItems.map((item) => (
           <li key={item} style={{ position: "relative" }}>
@@ -48,6 +48,7 @@ export default function Navbar() {
               href={`#${item}`}
               className={`nav-link ${activeTab === item ? "active" : ""}`}
               onClick={() => handleNavClick(item)}
+              aria-current={activeTab === item ? "page" : undefined}
             >
               {activeTab === item && (
                 <motion.div

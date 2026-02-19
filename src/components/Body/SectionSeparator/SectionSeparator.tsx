@@ -34,6 +34,7 @@ export default function SectionSeparator({ label }: SectionSeparatorProps) {
   return (
     <motion.div
       className="section-separator"
+      aria-hidden="true"
       initial={{ opacity: 0, scaleX: 0 }}
       whileInView={{ opacity: 1, scaleX: 1 }}
       transition={{ duration: 1, type: "spring" }}

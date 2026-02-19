@@ -41,7 +41,8 @@
 	justify-content: center;
 	align-items: center;
 	z-index: 10;
-	pointer-events: none;
+	pointer-events: auto;
+	cursor: ew-resize;
 }
 
 .slider-button {
@@ -60,4 +61,9 @@
 	width: 16px;
 	height: 16px;
 	margin: -2px;
+}
+
+.slider-handle:focus-visible .slider-button {
+	outline: 2px solid #00ffff;
+	outline-offset: 3px;
 }

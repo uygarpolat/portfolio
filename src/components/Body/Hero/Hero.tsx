@@ -4,9 +4,12 @@ import "./Hero.css";
 
 export default function Hero() {
   return (
-    <div id="hero">
+    <section id="hero" aria-labelledby="home-heading">
+      <h2 id="home-heading" className="sr-only">
+        Home
+      </h2>
       <Image />
       <Info />
-    </div>
+    </section>
   );
 }

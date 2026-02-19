@@ -70,7 +70,7 @@ export default function Socials() {
           }}
           onAnimationComplete={() => setIsLoaded(true)}
         >
-          <social.icon />
+          <social.icon aria-hidden="true" focusable="false" />
         </motion.a>
       ))}
     </div>

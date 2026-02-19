@@ -89,7 +89,8 @@ export default function Project({
                 rel="noopener noreferrer"
                 className="link-btn github"
               >
-                <i className="devicon-github-original"></i> GitHub
+                <i className="devicon-github-original" aria-hidden="true"></i>{" "}
+                GitHub
               </a>
             )}
             {deploy && (
@@ -99,7 +100,8 @@ export default function Project({
                 rel="noopener noreferrer"
                 className="link-btn deploy"
               >
-                <i className="devicon-chrome-plain"></i> Website
+                <i className="devicon-chrome-plain" aria-hidden="true"></i>{" "}
+                Website
               </a>
             )}
           </div>

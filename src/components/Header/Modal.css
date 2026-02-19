@@ -1,4 +1,4 @@
-#modal {
+.modal-overlay {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -20,6 +20,19 @@
 	max-width: 300px;
 	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-close {
+	background: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	color: inherit;
+	border-radius: 9999px;
+	padding: 0.35rem 0.8rem;
+	font-family: 'Outfit', sans-serif;
+	font-size: 0.85rem;
+	cursor: pointer;
+	display: block;
+	margin: 0 auto 1rem auto;
 }
 
 .modal-nav {

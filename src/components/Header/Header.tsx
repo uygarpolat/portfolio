@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "motion/react";
 
 import Brand from "./Brand";
@@ -15,6 +15,8 @@ interface HeaderProps {
 
 export default function Header({ theme, toggleTheme }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const sandwichRef = useRef<HTMLButtonElement>(null);
+  const menuDialogId = "mobile-menu-dialog";
 
   const springTransition = { type: "spring", duration: 2 } as const;
 
@@ -43,10 +45,21 @@ export default function Header({ theme, toggleTheme }: HeaderProps) {
         transition={springTransition}
       >
         <Actions theme={theme} toggleTheme={toggleTheme} />
-        <Sandwich onClick={() => setIsMenuOpen((prev) => !prev)} />
+        <Sandwich
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+          expanded={isMenuOpen}
+          controls={menuDialogId}
+          buttonRef={sandwichRef}
+        />
       </motion.div>
 
-      {isMenuOpen && <Modal onClose={() => setIsMenuOpen(false)} />}
+      {isMenuOpen && (
+        <Modal
+          id={menuDialogId}
+          onClose={() => setIsMenuOpen(false)}
+          triggerRef={sandwichRef}
+        />
+      )}
     </header>
   );
 }

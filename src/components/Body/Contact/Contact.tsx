@@ -65,7 +65,10 @@ export default function Contact() {
   };
 
   return (
-    <div id="Contact">
+    <section id="Contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" className="sr-only">
+        Contact
+      </h2>
       <motion.div
         className="contact-container"
         initial={{ opacity: 0, y: 30 }}
@@ -85,7 +88,9 @@ export default function Contact() {
             animate={{ opacity: 1, scale: 1 }}
           >
             <h3>Message Sent! 🚀</h3>
-            <p>Thanks for reaching out. I'll get back to you soon.</p>
+            <p role="status" aria-live="polite">
+              Thanks for reaching out. I'll get back to you soon.
+            </p>
             <button
               className="submit-btn"
               onClick={() => setStatus("idle")}
@@ -121,9 +126,13 @@ export default function Contact() {
                 disabled={status === "loading"}
                 onBlur={handleBlur}
                 onChange={() => setValidationError(null)}
+                aria-invalid={Boolean(validationError)}
+                aria-describedby={validationError ? "email-error" : undefined}
               />
               {validationError && (
                 <p
+                  id="email-error"
+                  role="alert"
                   className="validation-error"
                   style={{
                     color: "red",
@@ -154,11 +163,11 @@ export default function Contact() {
               disabled={status === "loading"}
             >
               {status === "loading" ? "Sending..." : "Send Message"}{" "}
-              <i className="devicon-telegram-plain"></i>
+              <i className="devicon-telegram-plain" aria-hidden="true"></i>
             </button>
 
             {status === "error" && (
-              <p className="error-message">
+              <p className="error-message" role="alert">
                 Oops! Something went wrong. Please try again or{" "}
                 <a
                   href="mailto:info@uygarpolat.com"
@@ -173,6 +182,6 @@ export default function Contact() {
           </form>
         )}
       </motion.div>
-    </div>
+    </section>
   );
 }

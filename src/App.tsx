@@ -16,7 +16,9 @@ export default function App() {
   return (
     <>
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <Body />
+      <main id="main-content">
+        <Body />
+      </main>
     </>
   );
 }
