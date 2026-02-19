@@ -32,3 +32,4 @@ convert_to_webm.py
 # Playwright
 playwright-report/
 test-results/
+scripts/
