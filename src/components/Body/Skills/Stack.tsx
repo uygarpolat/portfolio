@@ -46,6 +46,7 @@ const stackItems = {
     { name: "git", logoStyle: "plain-wordmark", colored: true },
     { name: "github", logoStyle: "original-wordmark", colored: false },
     { name: "docker", logoStyle: "plain-wordmark", colored: true },
+	{ name: "kubernetes", logoStyle: "plain-wordmark", colored: true },
     { name: "linux", logoStyle: "plain", colored: true },
     { name: "vim", logoStyle: "plain", colored: true },
     { name: "vscode", logoStyle: "plain-wordmark", colored: true },
