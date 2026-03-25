@@ -4,6 +4,7 @@ import todo from "../assets/videos/todo.webm";
 import minishellImg from "../assets/images/minishell-minishell.webp";
 import bashImg from "../assets/images/minishell-bash.webp";
 import pong from "../assets/videos/pong.webm";
+import calmWiki from "../assets/videos/calm-wiki.webm";
 import portfolio from "../assets/videos/portfolio.webm";
 
 export const projects = [
@@ -55,6 +56,21 @@ export const projects = [
       { name: "typescript", logoStyle: "plain", colored: true },
       { name: "postgresql", logoStyle: "plain-wordmark", colored: true },
       { name: "docker", logoStyle: "plain-wordmark", colored: true },
+    ],
+  },
+  {
+    title: "Calm Wiki",
+    description:
+      "A lightweight mobile app for reading curated two-minute summaries of interesting Wikipedia articles. Built with Expo and React Native, it includes favorites, reading history, and light/dark mode support.",
+    mediaSrc: calmWiki,
+    mediaType: "video" as const,
+    github: "https://github.com/uygarpolat/wiki",
+    deploy: "https://calm-wiki.expo.app/",
+    stack: [
+      { name: "expo", logoStyle: "original-wordmark", colored: false },
+      { name: "reactnative", logoStyle: "original-wordmark", colored: true },
+      { name: "typescript", logoStyle: "plain", colored: true },
+      { name: "supabase", logoStyle: "plain-wordmark", colored: true },
     ],
   },
   {
