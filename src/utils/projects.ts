@@ -5,6 +5,7 @@ import minishellImg from "../assets/images/minishell-minishell.webp";
 import bashImg from "../assets/images/minishell-bash.webp";
 import pong from "../assets/videos/pong.webm";
 import calmWiki from "../assets/videos/calm-wiki.webm";
+import simpleGoals from "../assets/videos/simple-goals.webm";
 import portfolio from "../assets/videos/portfolio.webm";
 
 export const projects = [
@@ -71,6 +72,20 @@ export const projects = [
       { name: "reactnative", logoStyle: "original-wordmark", colored: true },
       { name: "typescript", logoStyle: "plain", colored: true },
       { name: "supabase", logoStyle: "plain-wordmark", colored: true },
+    ],
+  },
+  {
+    title: "Simple Goals",
+    description:
+      "A small goal-tracking mobile app built with React Native and Expo. It focuses on core React Native fundamentals like component composition, state management, list rendering, modal input flows, and simple local persistence.",
+    mediaSrc: simpleGoals,
+    mediaType: "video" as const,
+    github: "https://github.com/uygarpolat/simple-goals",
+    deploy: "https://simple-goals.expo.app/",
+    stack: [
+      { name: "expo", logoStyle: "original-wordmark", colored: false },
+      { name: "reactnative", logoStyle: "original-wordmark", colored: true },
+      { name: "javascript", logoStyle: "plain", colored: true },
     ],
   },
   {
