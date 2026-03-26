@@ -19,6 +19,7 @@ const stackItems = {
   ],
   frontend: [
     { name: "react", logoStyle: "original-wordmark", colored: true },
+    { name: "reactnative", logoStyle: "original-wordmark", colored: true },
     { name: "html5", logoStyle: "plain-wordmark", colored: true },
     { name: "css3", logoStyle: "plain-wordmark", colored: true },
     { name: "redux", logoStyle: "original", colored: true },
@@ -39,6 +40,7 @@ const stackItems = {
   tools: [
     { name: "pytorch", logoStyle: "plain-wordmark", colored: true },
     { name: "nextjs", logoStyle: "original-wordmark", colored: false },
+    { name: "expo", logoStyle: "original-wordmark", colored: false },
     { name: "numpy", logoStyle: "plain-wordmark", colored: true },
     { name: "pandas", logoStyle: "plain-wordmark", colored: true },
     { name: "jupyter", logoStyle: "plain-wordmark", colored: true },
