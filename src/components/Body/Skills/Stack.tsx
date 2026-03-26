@@ -31,6 +31,7 @@ const stackItems = {
     { name: "fastapi", logoStyle: "plain-wordmark", colored: true },
     { name: "nodejs", logoStyle: "plain-wordmark", colored: true },
     { name: "express", logoStyle: "original-wordmark", colored: false },
+    { name: "supabase", logoStyle: "plain-wordmark", colored: false },
     { name: "postgresql", logoStyle: "plain-wordmark", colored: true },
     { name: "mysql", logoStyle: "plain-wordmark", colored: true },
     { name: "sqlite", logoStyle: "plain-wordmark", colored: true },
