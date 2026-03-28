@@ -45,6 +45,7 @@ const stackItems = {
     { name: "numpy", logoStyle: "plain-wordmark", colored: true },
     { name: "pandas", logoStyle: "plain-wordmark", colored: true },
     { name: "jupyter", logoStyle: "plain-wordmark", colored: true },
+    { name: "opencv", logoStyle: "plain-wordmark", colored: true },
     { name: "bash", logoStyle: "plain", colored: false },
     { name: "git", logoStyle: "plain-wordmark", colored: true },
     { name: "github", logoStyle: "original-wordmark", colored: false },
