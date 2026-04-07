@@ -2,28 +2,31 @@ import { motion } from "motion/react";
 import "./Certificates.css";
 
 const images = import.meta.glob<{ default: string }>(
-  "../../../assets/certificates/*.webp",
+  "../../../assets/certificates/*.{webp,WEBP}",
   {
     eager: true,
   }
 );
 
-const certificates = Object.entries(images).map(([path, module]) => {
-  const fileName = path.split("/").pop()?.split(".")[0] || "Certificate";
-  return {
-    src: module.default,
-    title: fileName,
-  };
-});
+const certificates = Object.entries(images)
+  .sort(([pathA], [pathB]) => pathA.localeCompare(pathB))
+  .map(([path, module]) => {
+    const fileName = path.split("/").pop()?.split(".")[0] || "Certificate";
+    return {
+      id: path,
+      src: module.default,
+      title: fileName,
+    };
+  });
 
 export default function Certificates() {
   return (
     <div id="certificates">
       <h3 id="section-title-cert">Certifications</h3>
       <div className="certificates-grid">
-        {certificates.map((cert, index) => (
+        {certificates.map((cert) => (
           <motion.div
-            key={index}
+            key={cert.id}
             className="certificate-card"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
