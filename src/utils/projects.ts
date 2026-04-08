@@ -12,7 +12,7 @@ export const projects = [
   {
     title: "Portfolio",
     description:
-      "My personal portfolio website, the one you are looking at right now! Built with React, TypeScript, Vanilla CSS, and Vite",
+      "My personal portfolio website, the one you are looking at right now! Built with React, TypeScript, Vanilla CSS, and Vite.",
     mediaSrc: portfolio,
     mediaType: "video" as const,
     github: "https://github.com/uygarpolat/portfolio",
